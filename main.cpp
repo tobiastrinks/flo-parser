@@ -42,7 +42,7 @@ vector<string> extractDataLinesFrom(const string& input) {
         separatorPos != -1;
         separatorPos = input.find(separator, offset)
     ) {
-        commands.push_back(input.substr(offset, separatorPos - offset - 1));
+        commands.push_back(input.substr(offset, separatorPos - offset));
         offset = separatorPos + separator.length();
     }
 
